@@ -17,6 +17,7 @@ dev = [
     "alembic>=1.13",
     "psycopg[binary]>=3.2",
     "pydantic-settings>=2.4",
+    "yfinance>=0.2.66",
 ]
 
 [build-system]
