@@ -1,6 +1,6 @@
 import datetime
 
-from sqlalchemy import Date, Float, ForeignKey, String
+from sqlalchemy import BigInteger, Date, Float, ForeignKey, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.session import Base
@@ -29,6 +29,6 @@ class Price(Base):
     high: Mapped[float] = mapped_column(Float)
     low: Mapped[float] = mapped_column(Float)
     close: Mapped[float] = mapped_column(Float)
-    volume: Mapped[int | None] = mapped_column(nullable=True)
+    volume: Mapped[int | None] = mapped_column(BigInteger, nullable=True)
 
     asset: Mapped["Asset"] = relationship(back_populates="prices")
